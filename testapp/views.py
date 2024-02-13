@@ -1,4 +1,7 @@
-from testapp import app
+from flask import Flask
+app = Flask(__name__)
+
+# from testapp import app
 from flask import render_template
 from flask import request
 from flask import Flask
