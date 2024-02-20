@@ -15,17 +15,17 @@ from lxml import etree
 import time
 
 
-app.secret_key = 'tsuruhiro'
+# app.secret_key = 'tsuruhiro'
 
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    if request.method == 'POST':
-        if request.form['password'] == 'tsuruta':  # パスワードを設定
-            session['logged_in'] = True
-            return redirect(url_for('sample_form'))
-        else:
-            return 'ログイン失敗！'
-    return render_template('test_app/login.html')
+# @app.route('/login', methods=['GET', 'POST'])
+# def login():
+#     if request.method == 'POST':
+#         if request.form['password'] == 'tsuruta':  # パスワードを設定
+#             session['logged_in'] = True
+#             return redirect(url_for('sample_form'))
+#         else:
+#             return 'ログイン失敗！'
+#     return render_template('test_app/login.html')
 
 @app.route('/')
 def sample_form():
